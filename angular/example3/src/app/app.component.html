@@ -1,0 +1,12 @@
+<div>RSVP</div>
+<div *ngFor="let invitation of invitations; let i = index">
+  <input type="checkbox" id="chk_{{ i }}" [(ngModel)]="invitation.rsvp" />
+  <label for="chk_{{ i }}">{{ i }}. {{ invitation.invitee }}</label>
+</div>
+<input
+  [disabled]="!quorum()"
+  type="button"
+  value="Party!"
+  (click)="confirmParty()"
+/>
+{{ message }}
