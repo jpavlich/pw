@@ -1,29 +1,28 @@
 # Instalación
 
-* Instalar [Node.js](https://github.com/nodesource/distributions/blob/master/README.md)
-    * Instrucciones para [Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
+- Instalar [Node.js](https://github.com/nodesource/distributions/blob/master/README.md)
 
-* Instalar Angular CLI
-    `sudo npm install -g @angular/cli`
+  - Instrucciones para [Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
 
-* Actualizar NPM
-    `sudo npm install -g npm`
+- Instalar Angular CLI
+  `sudo npm install -g @angular/cli`
 
-* Instalar otros
-    `sudo npm install -g typescript`
-    `sudo npm install -g tslint`
-    `sudo npm install -g prettier`
+- Actualizar NPM
+  `sudo npm install -g npm`
 
-* Configurar workspace
-    * `shift+ctrl+p`
-    * Abrir la opción `Preferences: Open Workspace Settings`
-    * Habilitar las siguientes opciones:
-        * `Tslint: Enable`
-        * `Prettier: Tslint Integration`
+- Instalar otros
+  `sudo npm install -g typescript`
+  `sudo npm install -g tslint`
+  `sudo npm install -g prettier`
+
+- Configurar workspace
+  - `shift+ctrl+p`
+  - Abrir la opción `Preferences: Open User Settings`
+  - Habilitar las siguientes opciones:
+    - `Tslint: Enable`
+    - `Prettier: Tslint Integration`
 
 # Creación y configuración de un proyecto
 
-* Crear proyecto usando Angular CLI
-    `ng n nombre_proyecto`
-
-
+- Crear proyecto usando Angular CLI
+  `ng n nombre_proyecto`
