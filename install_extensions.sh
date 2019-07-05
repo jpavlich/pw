@@ -29,5 +29,4 @@ code --install-extension PKief.material-icon-theme
 code --install-extension redhat.java
 code --install-extension ritwickdey.LiveServer
 code --install-extension shd101wyy.markdown-preview-enhanced
-code --install-extension steoates.autoimport
 code --install-extension vscjava.vscode-java-debug

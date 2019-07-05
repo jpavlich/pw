@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { Person } from './person';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,7 @@ import { Component, ViewChild } from '@angular/core';
 export class AppComponent {
   name = 'Alice';
 
-  person = {
-    name: 'Bob',
-    age: 20
-  };
+  person = new Person('Bob', 20);
+
+  party = ['Alice', 'Bob', 'Carol', 'David', 'Eve'];
 }

@@ -2,3 +2,10 @@
 <div>Hi {{ name }}</div>
 
 <div>{{ person.name }} is {{ person.age }} years old</div>
+
+<div>
+  Invited to party:
+  <li *ngFor="let invited of party">{{ invited }}</li>
+</div>
+
+<div *ngIf="party.length > 3">There is Quorum</div>
