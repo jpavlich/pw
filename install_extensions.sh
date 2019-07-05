@@ -7,10 +7,12 @@ code --install-extension donjayamanne.githistory
 code --install-extension eamodio.gitlens
 code --install-extension ecmel.vscode-html-css
 code --install-extension EditorConfig.EditorConfig
+code --install-extension eg2.tslint
 code --install-extension eg2.vscode-npm-script
 code --install-extension esbenp.prettier-vscode
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
+code --install-extension ghaschel.vscode-angular-html
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension infinity1207.angular2-switcher
 code --install-extension johnpapa.angular-essentials
@@ -20,7 +22,6 @@ code --install-extension johnpapa.winteriscoming
 code --install-extension mikestead.dotenv
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
-code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension natewallace.angular2-inline
 code --install-extension nrwl.angular-console
@@ -28,4 +29,5 @@ code --install-extension PKief.material-icon-theme
 code --install-extension redhat.java
 code --install-extension ritwickdey.LiveServer
 code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension steoates.autoimport
 code --install-extension vscjava.vscode-java-debug
