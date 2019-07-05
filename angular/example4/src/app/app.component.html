@@ -1,0 +1,18 @@
+<div>
+  <p>Clicking Button</p>
+  <input #myInput /><button (click)="setMessage(myInput.value)">Copy</button>
+</div>
+<div>
+  <p>Writing</p>
+  <input #myInput2 (keyup)="setMessage(myInput2.value)" />
+</div>
+<div>
+  <p>Pressing Enter</p>
+  <input #myInput3 (keyup.enter)="setMessage(myInput3.value)" />
+</div>
+<div>
+  <p>When text box loses focus</p>
+  <input #myInput4 (blur)="setMessage(myInput4.value)" />
+</div>
+
+<p>Message: {{ message }}</p>
