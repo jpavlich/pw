@@ -1,1 +1,13 @@
-<div></div>
+<div>RSVP</div>
+<div *ngFor="let invitee of party; let i = index">
+  <input
+    type="checkbox"
+    name=""
+    id="chk{{ invitee }}"
+    value="{{ confirmed[i] }}"
+    (change)="rsvp($event, i)"
+  />
+  <label for="chk{{ invitee }}">{{ i }}. {{ invitee }}</label>
+</div>
+<input type="button" value="Party!" (click)="confirmParty()" />
+{{ message }}
