@@ -5,14 +5,19 @@
   - Instrucciones para [Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
 
 - Instalar Angular CLI
+
   `sudo npm install -g @angular/cli`
 
 - Actualizar NPM
+
   `sudo npm install -g npm`
 
 - Instalar otros
+
   `sudo npm install -g typescript`
+
   `sudo npm install -g tslint`
+
   `sudo npm install -g prettier`
 
 - Configurar workspace

@@ -1,0 +1,7 @@
+<div class="container">
+  <app-mail-list
+    [mails]="mailList"
+    (selectionChanged)="changeMail($event)"
+  ></app-mail-list>
+  <app-mail-view [mail]="selectedMail"></app-mail-view>
+</div>

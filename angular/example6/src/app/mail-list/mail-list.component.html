@@ -1,0 +1,10 @@
+<div class="mail-list">
+  <div
+    class="mail-item"
+    [ngClass]="{ selected: i == selectedIndex }"
+    *ngFor="let mail of mails; let i = index"
+    (mousedown)="selectMail(i)"
+  >
+    From {{ mail.sender }}: {{ mail.subject }}
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.mail-item {
+  border: 0px;
+  border-bottom: 1px;
+  border-color: black;
+  border-style: solid;
+  font-weight: normal;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+.mail-list {
+  border-style: solid;
+  width: 30%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  margin: 0px;
+  padding: 0px;
+}
