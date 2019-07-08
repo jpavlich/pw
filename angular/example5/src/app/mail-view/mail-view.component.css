@@ -1,0 +1,8 @@
+.mail-view {
+  border-style: solid;
+  width: 70%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}

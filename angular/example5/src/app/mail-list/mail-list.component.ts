@@ -22,4 +22,8 @@ export class MailListComponent implements OnInit {
   ngOnInit() {
     this.selectedMail = this.mails[0];
   }
+
+  selectMail(i) {
+    this.selectedMail = this.mails[i];
+  }
 }

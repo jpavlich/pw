@@ -9,6 +9,7 @@ import { Mail } from '../mail';
 export class MailViewComponent implements OnInit {
   @Input()
   mail: Mail;
+
   constructor() {}
 
   ngOnInit() {}
