@@ -1,0 +1,5 @@
+<div class="mail-item" *ngFor="let mail of mails">
+  From {{ mail.sender }}: {{ mail.subject }}
+</div>
+
+<app-mail-view [mail]="selectedMail"> </app-mail-view>
