@@ -38,3 +38,5 @@
 
 - `Unhandled rejection Error: EACCES: permission denied, mkdir...`
   - Ejecutar el script `fix_permissions.sh`
+- `Error: ENOSPC: no space left on device, watch...`
+  - Ejecutar el script `fix_no_space.sh`
