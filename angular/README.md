@@ -1,8 +1,9 @@
 # Instalación
 
-- Instalar [Node.js](https://github.com/nodesource/distributions/blob/master/README.md)
+- Instalar [Node.js](https://github.com/nodesource/distributions/blob/master/README.md) **version 10.x**
 
   - Instrucciones para [Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
+  - Repito: **la versión a instalar debe ser la 10.x**. No instalar versiones más nuevas, ya que pueden generar errores.
 
 - Instalar Angular CLI
 
@@ -26,6 +27,7 @@
   - Habilitar las siguientes opciones:
     - `Tslint: Enable`
     - `Prettier: Tslint Integration`
+    - `Editor: Format On Save` (opcional)
 
 # Creación y configuración de un proyecto
 

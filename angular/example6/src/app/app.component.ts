@@ -19,8 +19,7 @@ export class AppComponent {
     new Mail('aa7@b.cc', 'hello7', 'world7')
   ];
 
-  changeMail(i) {
-    console.log(i);
+  changeMail(i: number) {
     this.selectedMail = this.mailList[i];
   }
 }
