@@ -31,3 +31,8 @@
 
 - Crear proyecto usando Angular CLI
   `ng n nombre_proyecto`
+
+# Errores y solución
+
+- `Unhandled rejection Error: EACCES: permission denied, mkdir...`
+  - Ejecutar el script `fix_permissions.sh`
