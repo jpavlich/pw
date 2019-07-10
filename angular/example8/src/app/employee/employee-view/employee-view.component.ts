@@ -18,9 +18,7 @@ export class EmployeeViewComponent implements OnInit {
   search() {
     this.employeeService.findById(this.searchId).subscribe(
       result => {
-        // Clones the object result and assigns it to this.employee
-        // It is better to clone than to directly assign, since result is not immutable
-        this.employee = { ...result };
+        this.employee = result;
         console.log(this.employee);
       },
       error => {

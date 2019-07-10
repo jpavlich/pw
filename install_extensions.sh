@@ -43,6 +43,7 @@ code --install-extension natewallace.angular2-inline
 code --install-extension NG-42.ng-fortytwo-vscode-extension
 code --install-extension nrwl.angular-console
 code --install-extension PKief.material-icon-theme
+code --install-extension platformio.platformio-ide
 code --install-extension pmneo.tsimporter
 code --install-extension rbbit.typescript-hero
 code --install-extension redhat.java
@@ -56,10 +57,10 @@ code --install-extension twxs.cmake
 code --install-extension UVBrain.Angular2
 code --install-extension vector-of-bool.cmake-tools
 code --install-extension vector-of-bool.gitflow
-code --install-extension vismalietuva.vscode-angular-support
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscjava.vscode-java-debug
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension wgenial.html-snippets
 code --install-extension wholroyd.jinja
 code --install-extension wmaurer.change-case
+code --install-extension Zaczero.bootstrap-v4-snippets

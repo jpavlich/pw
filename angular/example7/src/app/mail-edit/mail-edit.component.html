@@ -3,6 +3,26 @@
   <!-- https://angular.io/api/forms/NgForm -->
   <form (ngSubmit)="onSubmit()" #mailForm="ngForm">
     <div class="form-group">
+      <label for="sender">Sender</label>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation -->
+      <input
+        type="text"
+        pattern="\w+@\w+(\.\w+)*"
+        class="form-control"
+        id="sender"
+        required
+        [(ngModel)]="mail.sender"
+        name="sender"
+        #txtSender="ngModel"
+      />
+      <div
+        [hidden]="txtSender.valid || !txtSender.touched"
+        class="alert alert-danger"
+      >
+        Email invalid
+      </div>
+    </div>
+    <div class="form-group">
       <label for="subject">Subject</label>
       <input
         type="text"
