@@ -1,5 +1,5 @@
 <div class="container">
-  <form id="formId" (ngSubmit)="submitMethod()" #refForm="ngForm">
+  <form id="formId" (ngSubmit)="search()" #searchForm="ngForm">
     <div class="form-group">
       <label for="searchById">Search by ID</label>
       <input
@@ -7,8 +7,32 @@
         class="form-control"
         type="text"
         name="searchById"
+        [(ngModel)]="searchId"
+        required
       />
     </div>
-    <button type="submit" class="btn">Search</button>
+    <button type="submit" class="btn" [disabled]="!searchForm.valid">
+      Search
+    </button>
   </form>
+  <table *ngIf="employee && employee.id" class="table table-light">
+    <tbody>
+      <tr>
+        <td>ID</td>
+        <td>{{ employee.id }}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{ employee.employee_name }}</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>{{ employee.employee_age }}</td>
+      </tr>
+      <tr>
+        <td>Salary</td>
+        <td>{{ employee.employee_salary }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
