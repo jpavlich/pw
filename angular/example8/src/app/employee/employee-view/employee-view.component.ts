@@ -10,16 +10,23 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeViewComponent implements OnInit {
   employee: Employee = null;
   searchId: number = null;
+  errorMessage = '';
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {}
 
   search() {
-    this.employeeService.findById(this.searchId).subscribe(result => {
-      // Clones the object result and assigns it to this.employee
-      // It is better to clone than to directly assign, since result is not immutable
-      this.employee = { ...result };
-      console.log(this.employee);
-    });
+    this.employeeService.findById(this.searchId).subscribe(
+      result => {
+        // Clones the object result and assigns it to this.employee
+        // It is better to clone than to directly assign, since result is not immutable
+        this.employee = { ...result };
+        console.log(this.employee);
+      },
+      error => {
+        console.log(error);
+        this.errorMessage = 'Connection error';
+      }
+    );
   }
 }

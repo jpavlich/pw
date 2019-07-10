@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Employee } from './employee';
+import { throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +11,16 @@ import { Employee } from './employee';
 export class EmployeeService {
   constructor(private http: HttpClient) {}
 
+  private handleError(error: HttpErrorResponse) {
+    return throwError('An error has occurred');
+  }
+
   findById(id: number) {
     const url = `${environment.employeeServiceBaseUrl}/employee/${id}`;
     console.log(url);
-    return this.http.get<Employee>(url);
+    return this.http.get<Employee>(url).pipe(
+      retry(5),
+      catchError(this.handleError)
+    );
   }
 }
