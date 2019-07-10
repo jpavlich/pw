@@ -1,0 +1,14 @@
+<div class="container">
+  <form id="formId" (ngSubmit)="submitMethod()" #refForm="ngForm">
+    <div class="form-group">
+      <label for="searchById">Search by ID</label>
+      <input
+        id="searchById"
+        class="form-control"
+        type="text"
+        name="searchById"
+      />
+    </div>
+    <button type="submit" class="btn">Search</button>
+  </form>
+</div>

@@ -26,6 +26,7 @@
   - Abrir la opción `Preferences: Open User Settings`
   - Habilitar las siguientes opciones:
     - `Tslint: Enable`
+    - `HTML > Format: Enable`
     - `Prettier: Tslint Integration`
     - `Editor: Format On Save` (opcional)
 
