@@ -16,6 +16,7 @@ export class EmployeeViewComponent implements OnInit {
   ngOnInit() {}
 
   search() {
+    // https://netbasal.com/when-to-unsubscribe-in-angular-d61c6b21bad3
     this.employeeService.findById(this.searchId).subscribe(
       result => {
         this.employee = result;
