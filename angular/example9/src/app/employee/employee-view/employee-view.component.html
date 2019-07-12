@@ -1,40 +1,39 @@
 <div class="container">
-  <form id="formId" (ngSubmit)="search()" #searchForm="ngForm">
-    <div class="form-group">
-      <label for="searchById">Search by ID</label>
-      <input
-        id="searchById"
-        class="form-control"
-        type="text"
-        name="searchById"
-        [(ngModel)]="searchId"
-        required
-      />
-    </div>
-    <button type="submit" class="btn" [disabled]="!searchForm.valid">
-      Search
-    </button>
-  </form>
-  <table *ngIf="employee && employee.id" class="table table-light">
-    <tbody>
-      <tr>
-        <td>ID</td>
-        <td>{{ employee.id }}</td>
-      </tr>
-      <tr>
-        <td>Name</td>
-        <td>{{ employee.employee_name }}</td>
-      </tr>
-      <tr>
-        <td>Age</td>
-        <td>{{ employee.employee_age }}</td>
-      </tr>
-      <tr>
-        <td>Salary</td>
-        <td>{{ employee.employee_salary }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- The code for this link is very crude. It assumes that there is an employee whose id is consecutive to the current employee -->
+  <!-- <a [routerLink]="['/employee/view', +employee.id + 1]">Next</a> -->
+
+  <!-- This icon will show while the employee is loading https://icons8.com/preloaders/en/circular/fading-lines/-->
+  <img
+    src="assets/icons/waiting.gif"
+    alt="Please wait..."
+    *ngIf="!(employee && employee.id)"
+  />
+
+  <div *ngIf="employee && employee.id">
+    <a [routerLink]="['/employee/edit', employee.id]">Edit</a>
+    <table class="table table-light">
+      <tbody>
+        <tr>
+          <td>ID</td>
+          <td>{{ employee.id }}</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>{{ employee.employee_name }}</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>{{ employee.employee_age }}</td>
+        </tr>
+        <tr>
+          <td>Salary</td>
+          <td>{{ employee.employee_salary }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="backToList()">Back to list</button>
+  </div>
+
   <div *ngIf="errorMessage" class="alert alert-danger">
     {{ errorMessage }}
   </div>

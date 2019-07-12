@@ -1,0 +1,43 @@
+<div class="container">
+  <form (ngSubmit)="save()" #editForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        class="form-control"
+        type="text"
+        name="name"
+        [(ngModel)]="employee.employee_name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input
+        id="age"
+        class="form-control"
+        type="text"
+        name="age"
+        [(ngModel)]="employee.employee_age"
+      />
+    </div>
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input
+        id="salary"
+        class="form-control"
+        type="text"
+        name="salary"
+        [(ngModel)]="employee.employee_salary"
+      />
+    </div>
+
+    <button type="submit" [disabled]="!editForm.valid || editForm.submitted">
+      Save
+    </button>
+    <button (click)="cancel()">Cancel</button>
+  </form>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+</div>

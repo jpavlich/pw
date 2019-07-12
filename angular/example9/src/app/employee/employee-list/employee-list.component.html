@@ -1,20 +1,25 @@
-<table class="table table-light">
-  <thead class="thead-light">
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Salary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let employee of employees">
-      <td>
-        <a [routerLink]="['/employee/view', employee.id]">{{ employee.id }}</a>
-      </td>
-      <td>{{ employee.employee_name }}</td>
-      <td>{{ employee.employee_age }}</td>
-      <td>{{ employee.employee_salary }}</td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  <a [routerLink]="['/employee/create']">Create</a>
+  <table class="table table-light">
+    <thead class="thead-light">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>
+          <a [routerLink]="['/employee/view', employee.id]">{{
+            employee.id
+          }}</a>
+        </td>
+        <td>{{ employee.employee_name }}</td>
+        <td>{{ employee.employee_age }}</td>
+        <td>{{ employee.employee_salary }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

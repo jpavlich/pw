@@ -17,11 +17,11 @@ export class EmployeeListComponent implements OnInit {
   }
 
   findEmployees() {
-    this.employeeService.findAll().subscribe(
-      results => (this.employees = results),
-      error => {
-        console.log(error);
-      }
-    );
+    this.employeeService
+      .findAll()
+      .subscribe(
+        results => (this.employees = results),
+        error => console.error(error)
+      );
   }
 }
