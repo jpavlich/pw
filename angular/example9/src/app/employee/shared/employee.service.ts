@@ -61,16 +61,20 @@ export class EmployeeService {
     return this.get<Employee[]>(url);
   }
 
-  save(employee: Employee) {
+  update(employee: Employee) {
     const url = `${environment.employeeServiceBaseUrl}/update/${employee.id}`;
-    return this.put(url, employee);
+    return this.put(url, {
+      name: employee.employee_name,
+      age: employee.employee_age,
+      salary: employee.employee_salary
+    });
   }
   create(employee: Employee) {
     const url = `${environment.employeeServiceBaseUrl}/create`;
     return this.post(url, {
-      employee_name: employee.employee_name,
-      employee_age: employee.employee_age,
-      employee_salary: employee.employee_salary
+      name: employee.employee_name,
+      age: employee.employee_age,
+      salary: employee.employee_salary
     });
   }
 }

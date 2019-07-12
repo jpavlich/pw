@@ -10,13 +10,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./employee-create.component.css']
 })
 export class EmployeeCreateComponent implements OnInit {
-  employee: Employee = new Employee(
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    undefined
-  );
+  employee: Employee = new Employee(null, '', null, null, null);
 
   errorMessage = '';
 
@@ -28,7 +22,7 @@ export class EmployeeCreateComponent implements OnInit {
 
   ngOnInit() {}
 
-  save() {
+  create() {
     console.log(this.employee);
     this.employeeService.create(this.employee).subscribe(
       result => {

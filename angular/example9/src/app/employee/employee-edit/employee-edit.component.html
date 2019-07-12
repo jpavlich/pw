@@ -7,7 +7,7 @@
   />
 
   <div *ngIf="employee && employee.id">
-    <form (ngSubmit)="save()" #editForm="ngForm">
+    <form (ngSubmit)="update()" #updateForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input
@@ -39,8 +39,11 @@
         />
       </div>
 
-      <button type="submit" [disabled]="!editForm.valid || editForm.submitted">
-        Save
+      <button
+        type="submit"
+        [disabled]="!updateForm.valid || updateForm.submitted"
+      >
+        Update
       </button>
       <button (click)="cancel()">Cancel</button>
     </form>

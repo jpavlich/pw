@@ -30,9 +30,9 @@ export class EmployeeEditComponent implements OnInit {
       });
   }
 
-  save() {
+  update() {
     console.log(this.employee);
-    this.employeeService.save(this.employee).subscribe(
+    this.employeeService.update(this.employee).subscribe(
       result => {
         console.log(result);
         this.router.navigate([`/employee/view/${this.employee.id}`]);

@@ -1,5 +1,5 @@
 <div class="container">
-  <form (ngSubmit)="save()" #editForm="ngForm">
+  <form (ngSubmit)="create()" #createForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
       <input
@@ -31,8 +31,11 @@
       />
     </div>
 
-    <button type="submit" [disabled]="!editForm.valid || editForm.submitted">
-      Save
+    <button
+      type="submit"
+      [disabled]="!createForm.valid || createForm.submitted"
+    >
+      Create
     </button>
     <button (click)="cancel()">Cancel</button>
   </form>
