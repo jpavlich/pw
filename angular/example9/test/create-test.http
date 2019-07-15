@@ -1,0 +1,4 @@
+POST http://dummy.restapiexample.com/api/v1/create
+content-type: application/json
+
+{employee_name: "qegqeg", employee_salary: "qegqeg", employee_age: "qegqeg"}

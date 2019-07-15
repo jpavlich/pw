@@ -7,9 +7,18 @@
         class="form-control"
         type="text"
         name="name"
+        required
         [(ngModel)]="employee.employee_name"
+        #txtName="ngModel"
       />
+      <div
+        [hidden]="txtName.valid || !txtName.touched"
+        class="alert alert-danger"
+      >
+        Name is required
+      </div>
     </div>
+
     <div class="form-group">
       <label for="age">Age</label>
       <input
@@ -31,7 +40,7 @@
       />
     </div>
 
-    <button type="submit" [disabled]="!editForm.valid || editForm.submitted">
+    <button type="submit" [disabled]="!canSubmit">
       Save
     </button>
     <button (click)="cancel()">Cancel</button>
