@@ -35,6 +35,7 @@ export class EmployeeCreateComponent implements OnInit {
 
   save() {
     this.submitted = true;
+    console.log(this.employee);
     this.employeeService.create(this.employee).subscribe(
       result => {
         console.log(result);
