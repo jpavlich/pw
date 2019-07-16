@@ -28,6 +28,7 @@ code --install-extension ghaschel.vscode-angular-html
 code --install-extension GregorBiswanger.json2ts
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension hars.CppSnippets
+code --install-extension humao.rest-client
 code --install-extension infinity1207.angular2-switcher
 code --install-extension johnpapa.vscode-peacock
 code --install-extension magicstack.MagicPython
