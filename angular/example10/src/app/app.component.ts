@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { of, concat, merge, interval, zip } from 'rxjs';
+import { of, concat, merge, interval, zip, Observable } from 'rxjs';
 import {
   map,
   filter,
@@ -9,6 +9,7 @@ import {
   concatMap,
   switchMap
 } from 'rxjs/operators';
+import { ObserveOnOperator } from 'rxjs/internal/operators/observeOn';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ export class AppComponent implements OnInit {
     const dataSource = of(1, 2, 3, 4, 5);
     const dataSource2 = of(10, 20, 30, 40, 50);
     const t = interval(500);
-    const t2 = interval(1000);
+    const t2 = interval(100);
 
     const ds1 = zip(t, dataSource).pipe(pluck(1));
     const ds2 = zip(t2, dataSource2).pipe(pluck(1));
@@ -31,8 +32,13 @@ export class AppComponent implements OnInit {
     ds1
       .pipe(
         switchMap(v => {
-          console.log(v);
-          return ds2;
+          return zip(
+            t2,
+            Observable.create(obs => {
+              obs.next(v * 10);
+              obs.complete();
+            })
+          ).pipe(pluck(1));
         })
       )
       .subscribe(value => console.log(value));
