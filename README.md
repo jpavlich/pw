@@ -9,3 +9,5 @@
   - `example6`: Componentes personalizados con eventos
   - `example7`: Formulario basado en plantillas
   - `example8`: Cliente básico REST
+  - `example9`: Cliente REST CRUD con rutas
+  - `example10`: Comparación operadores RXJS: `concat`, `merge`, `concatMap`, `mergeMap` y `switchMap`
