@@ -23,6 +23,8 @@ import {
 } from 'rxjs/operators';
 import { ObserveOnOperator } from 'rxjs/internal/operators/observeOn';
 
+// https://www.learnrxjs.io//
+// https://rxmarbles.com/
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
