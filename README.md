@@ -11,3 +11,4 @@
   - `example8`: Cliente básico REST
   - `example9`: Cliente REST CRUD con rutas
   - `example10`: Comparación operadores RXJS: `concat`, `merge`, `concatMap`, `mergeMap` y `switchMap`
+  - `example11`: Cliente REST CRUD con Angular Material
