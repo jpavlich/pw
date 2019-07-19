@@ -1,34 +1,48 @@
 # Instalación
 
-- Instalar [Node.js](https://github.com/nodesource/distributions/blob/master/README.md) **version 10.x**
+1. Instalar [Node.js](https://github.com/nodesource/distributions/blob/master/README.md) **version 10.x**
 
-  - Instrucciones para [Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
-  - Repito: **la versión a instalar debe ser la 10.x**. No instalar versiones más nuevas, ya que pueden generar errores.
+- Instrucciones para [Ubuntu](https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
+- Repito: **la versión a instalar debe ser la 10.x**. No instalar versiones más nuevas, ya que pueden generar errores.
 
-- Instalar Angular CLI
+2. Instalar Angular CLI
 
-  `sudo npm install -g @angular/cli`
+`sudo npm install -g @angular/cli`
 
-- Actualizar NPM
+3. Actualizar NPM
 
-  `sudo npm install -g npm`
+`sudo npm install -g npm`
 
-- Instalar otros
+4. Instalar otros
 
-  `sudo npm install -g typescript`
+`sudo npm install -g typescript`
 
-  `sudo npm install -g tslint`
+`sudo npm install -g tslint`
 
-  `sudo npm install -g prettier`
+`sudo npm install -g prettier`
 
-- Configurar workspace
-  - `shift+ctrl+p`
-  - Abrir la opción `Preferences: Open User Settings`
-  - Habilitar las siguientes opciones:
-    - `Tslint: Enable`
-    - `HTML > Format: Enable`
-    - `Prettier: Tslint Integration`
-    - `Editor: Format On Save` (opcional)
+5. Remover configuración antigua de Visual Studio Code (Recomendado)
+
+- Remover las siguientes carpetas:
+
+  - `$HOME/.vscode`
+  - `$HOME/.config/Code`
+
+6. Instalar extensiones recomendadas de Visual Studio Code
+
+- Desde la carpeta de este repositorio, ejecutar `./install_extensions.sh`
+
+7. Configurar workspace
+
+- Abrir Visual Studio Code
+- `shift+ctrl+p`
+- Abrir la opción `Preferences: Open User Settings`
+- Habilitar las siguientes opciones:
+
+  - `Tslint: Enable`
+  - `HTML > Format: Enable`
+  - `Prettier: Tslint Integration`
+  - `Editor: Format On Save` (opcional)
 
 # Creación y configuración de un proyecto
 
