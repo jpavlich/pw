@@ -34,19 +34,19 @@
 
 6. Instalar extensiones recomendadas de Visual Studio Code
 
-- Desde la carpeta de este repositorio, ejecutar `./install_extensions.sh`
+   - Desde la carpeta de este repositorio, ejecutar `./install_extensions.sh`
 
 7. Configurar workspace
 
-- Abrir Visual Studio Code
-- `shift+ctrl+p`
-- Abrir la opción `Preferences: Open User Settings`
-- Habilitar las siguientes opciones:
+   - Abrir Visual Studio Code
+   - `shift+ctrl+p`
+   - Abrir la opción `Preferences: Open User Settings`
+   - Habilitar las siguientes opciones:
 
-  - `Tslint: Enable`
-  - `HTML > Format: Enable`
-  - `Prettier: Tslint Integration`
-  - `Editor: Format On Save` (recomendado)
+     - `Tslint: Enable`
+     - `HTML > Format: Enable`
+     - `Prettier: Tslint Integration`
+     - `Editor: Format On Save` (recomendado)
 
 # Creación y configuración de un proyecto
 
