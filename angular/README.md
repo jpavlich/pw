@@ -42,7 +42,7 @@
   - `Tslint: Enable`
   - `HTML > Format: Enable`
   - `Prettier: Tslint Integration`
-  - `Editor: Format On Save` (opcional)
+  - `Editor: Format On Save` (recomendado)
 
 # Creación y configuración de un proyecto
 
