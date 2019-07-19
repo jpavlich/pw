@@ -21,14 +21,15 @@
 
 `sudo npm install -g prettier`
 
-5.1. Instalar Visual Studio Code
+5. Visual Studio Code
+   a. Instalar Visual Studio Code
 
-5.2. Si Visual Studio Code ya estuviera instalado, remover configuración antigua de Visual Studio Code (Recomendado)
+   b. Si Visual Studio Code ya estuviera instalado, remover configuración antigua de Visual Studio Code (Recomendado)
 
-- Remover las siguientes carpetas:
+   - Remover las siguientes carpetas:
 
-  - `$HOME/.vscode`
-  - `$HOME/.config/Code`
+     - `$HOME/.vscode`
+     - `$HOME/.config/Code`
 
 6. Instalar extensiones recomendadas de Visual Studio Code
 
