@@ -10,7 +10,8 @@
   />
 
   <div *ngIf="employee && employee.id">
-    <a [routerLink]="['/employee/edit', employee.id]">Edit</a>
+    <div><a [routerLink]="['/employee/edit', employee.id]">Edit</a></div>
+    <div><a [routerLink]="" (click)="deleteEmployee()">Delete</a></div>
     <table class="table table-light">
       <tbody>
         <tr>
@@ -19,15 +20,15 @@
         </tr>
         <tr>
           <td>Name</td>
-          <td>{{ employee.employee_name }}</td>
+          <td>{{ employee.name }}</td>
         </tr>
         <tr>
           <td>Age</td>
-          <td>{{ employee.employee_age }}</td>
+          <td>{{ employee.age }}</td>
         </tr>
         <tr>
           <td>Salary</td>
-          <td>{{ employee.employee_salary }}</td>
+          <td>{{ employee.salary }}</td>
         </tr>
       </tbody>
     </table>

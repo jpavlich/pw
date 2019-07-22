@@ -40,4 +40,10 @@ export class EmployeeViewComponent implements OnInit {
   backToList() {
     this.router.navigate(['/employee/list']);
   }
+
+  deleteEmployee() {
+    this.employeeService
+      .deleteEmployee(this.employee)
+      .subscribe(result => console.log(result), error => console.log(error));
+  }
 }

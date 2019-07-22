@@ -48,11 +48,18 @@ export class EmployeeService {
       catchError(this.handleError)
     );
   }
+  private delete<T>(url: string): Observable<T> {
+    console.log('delete:', url);
+    return this.http.delete<T>(url).pipe(
+      // retry(5),
+      catchError(this.handleError)
+    );
+  }
 
   findById(
     id: number // : Observable<Employee>
   ) {
-    const url = `${environment.employeeServiceBaseUrl}/employee/${id}`;
+    const url = `${environment.employeeServiceBaseUrl}/employees/${id}`;
     return this.get<Employee>(url);
   }
 
@@ -62,19 +69,28 @@ export class EmployeeService {
   }
 
   update(employee: Employee) {
-    const url = `${environment.employeeServiceBaseUrl}/update/${employee.id}`;
+    const url = `${environment.employeeServiceBaseUrl}/employees/${
+      employee.id
+    }`;
     return this.put(url, {
-      name: employee.employee_name,
-      age: employee.employee_age,
-      salary: employee.employee_salary
+      name: employee.name,
+      age: employee.age,
+      salary: employee.salary
     });
   }
   create(employee: Employee) {
-    const url = `${environment.employeeServiceBaseUrl}/create`;
+    const url = `${environment.employeeServiceBaseUrl}/employees`;
     return this.post(url, {
-      name: employee.employee_name,
-      age: employee.employee_age,
-      salary: employee.employee_salary
+      name: employee.name,
+      age: employee.age,
+      salary: employee.salary
     });
+  }
+
+  deleteEmployee(employee: Employee) {
+    const url = `${environment.employeeServiceBaseUrl}/employees/${
+      employee.id
+    }`;
+    return this.delete(url);
   }
 }
