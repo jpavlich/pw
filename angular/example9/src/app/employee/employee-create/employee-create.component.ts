@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Employee } from '../shared/employee';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from '../shared/employee.service';
@@ -10,7 +10,18 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./employee-create.component.css']
 })
 export class EmployeeCreateComponent implements OnInit {
-  employee: Employee = new Employee(null, '', null, null, null);
+  @ViewChild('createForm', { static: true })
+  createForm;
+
+  submitted = false;
+
+  employee: Employee = new Employee(
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined
+  );
 
   errorMessage = '';
 
@@ -23,6 +34,7 @@ export class EmployeeCreateComponent implements OnInit {
   ngOnInit() {}
 
   create() {
+    this.submitted = true;
     console.log(this.employee);
     this.employeeService.create(this.employee).subscribe(
       result => {
@@ -32,11 +44,16 @@ export class EmployeeCreateComponent implements OnInit {
       error => {
         console.error(error);
         this.errorMessage = error.toString();
+        this.submitted = false;
       }
     );
   }
 
   cancel() {
     this.router.navigate([`/employee/list`]);
+  }
+
+  get canSubmit() {
+    return this.createForm.form.valid && !this.submitted;
   }
 }

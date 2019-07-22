@@ -28,6 +28,7 @@ code --install-extension ghaschel.vscode-angular-html
 code --install-extension GregorBiswanger.json2ts
 code --install-extension Gruntfuggly.todo-tree
 code --install-extension hars.CppSnippets
+code --install-extension humao.rest-client
 code --install-extension infinity1207.angular2-switcher
 code --install-extension johnpapa.vscode-peacock
 code --install-extension magicstack.MagicPython
@@ -42,6 +43,10 @@ code --install-extension mushan.vscode-paste-image
 code --install-extension natewallace.angular2-inline
 code --install-extension NG-42.ng-fortytwo-vscode-extension
 code --install-extension nrwl.angular-console
+code --install-extension Pivotal.vscode-boot-dev-pack
+code --install-extension Pivotal.vscode-concourse
+code --install-extension Pivotal.vscode-manifest-yaml
+code --install-extension Pivotal.vscode-spring-boot
 code --install-extension PKief.material-icon-theme
 code --install-extension pmneo.tsimporter
 code --install-extension rbbit.typescript-hero
@@ -58,6 +63,12 @@ code --install-extension vector-of-bool.gitflow
 code --install-extension vismalietuva.vscode-angular-support
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscjava.vscode-java-debug
+code --install-extension vscjava.vscode-java-dependency
+code --install-extension vscjava.vscode-java-pack
+code --install-extension vscjava.vscode-java-test
+code --install-extension vscjava.vscode-maven
+code --install-extension vscjava.vscode-spring-boot-dashboard
+code --install-extension vscjava.vscode-spring-initializr
 code --install-extension vscode-icons-team.vscode-icons
 code --install-extension wgenial.html-snippets
 code --install-extension wholroyd.jinja
