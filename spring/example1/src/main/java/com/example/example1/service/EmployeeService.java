@@ -2,6 +2,7 @@ package com.example.example1.service;
 
 import java.util.Optional;
 
+import com.example.example1.exceptions.NotFoundException;
 import com.example.example1.model.Employee;
 import com.example.example1.model.EmployeeRepository;
 
@@ -29,8 +30,8 @@ public class EmployeeService {
     }
 
     @GetMapping("/employees/{id}")
-    Optional<Employee> findEmployee(@PathVariable Long id) {
-        return repository.findById(id);
+    Employee findEmployee(@PathVariable Long id) {
+        return repository.findById(id).orElseThrow(() -> new NotFoundException("Employee not found"));
     }
 
     @PostMapping("/employees")
