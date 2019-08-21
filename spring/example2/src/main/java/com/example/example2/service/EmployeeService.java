@@ -1,10 +1,10 @@
-package com.example.example1.service;
+package com.example.example2.service;
 
 import java.util.Optional;
 
-import com.example.example1.exceptions.NotFoundException;
-import com.example.example1.model.Employee;
-import com.example.example1.model.EmployeeRepository;
+import com.example.example2.exceptions.NotFoundException;
+import com.example.example2.model.Employee;
+import com.example.example2.model.EmployeeRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
