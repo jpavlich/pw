@@ -74,3 +74,4 @@ code --install-extension wgenial.html-snippets
 code --install-extension wholroyd.jinja
 code --install-extension wmaurer.change-case
 code --install-extension Zaczero.bootstrap-v4-snippets
+code --install-extension johnpapa.angular2
