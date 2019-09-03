@@ -27,7 +27,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 // (2)
 // https://stackoverflow.com/questions/34617152/how-to-re-create-database-before-each-test-in-spring
-// @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class EmployeeServiceTest {
 
 	@Autowired
@@ -46,7 +46,7 @@ public class EmployeeServiceTest {
 	public void findEmployee() throws Exception {
 		mvc.perform(get("/employees/-1")).andExpect(status().isOk())
 				.andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
-				.andExpect(content().json("{'id': -1, 'name': 'employee1', 'age': 10, 'salary': 1000 }"));
+				.andExpect(content().json("{'id': -1, 'name': 'employee1', 'age': 40, 'salary': 1000 }"));
 	}
 
 	@Test
@@ -60,7 +60,7 @@ public class EmployeeServiceTest {
 
 		// (5) https://www.baeldung.com/junit-assertions
 		assertEquals("employee1", retrievedEmployee.getName());
-		assertEquals(10, retrievedEmployee.getAge().intValue());
+		assertEquals(40, retrievedEmployee.getAge().intValue());
 		assertEquals(1000, retrievedEmployee.getSalary().intValue());
 	}
 
