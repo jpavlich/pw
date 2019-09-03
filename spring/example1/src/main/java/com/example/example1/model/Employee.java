@@ -3,6 +3,7 @@ package com.example.example1.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  * Employee
@@ -13,9 +14,11 @@ public class Employee {
     @GeneratedValue
     Long id;
 
-    String name;
-    Integer age;
-    Integer salary;
+    private String name;
+    private Integer age;
+    private Integer salary;
+    @ManyToOne
+    private Company employer;
 
     /**
      * @return the id
@@ -71,6 +74,20 @@ public class Employee {
      */
     public void setSalary(Integer salary) {
         this.salary = salary;
+    }
+
+    /**
+     * @return the employer
+     */
+    public Company getEmployer() {
+        return employer;
+    }
+
+    /**
+     * @param employer the employer to set
+     */
+    public void setEmployer(Company employer) {
+        this.employer = employer;
     }
 
 }

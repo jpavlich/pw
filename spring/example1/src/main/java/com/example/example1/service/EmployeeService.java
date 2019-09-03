@@ -40,8 +40,15 @@ public class EmployeeService {
     }
 
     @PutMapping("/employees/{id}")
-    Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employee) {
-        employee.setId(id);
+    Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employeeData) {
+
+        Employee employee = findEmployee(id);
+        employee.setAge(employeeData.getAge());
+        employee.setSalary(employeeData.getSalary());
+        employee.setName(employeeData.getName());
+
+        // How to update the employer Company?
+
         return repository.save(employee);
     }
 

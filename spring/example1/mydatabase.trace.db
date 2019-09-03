@@ -2004,3 +2004,6 @@ org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (
 	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
 	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
 	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+2019-09-03 15:15:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO COMPANY (ID, NAME) VALUES (-1, 'company1') INSERT[*] INTO COMPANY (ID, NAME) VALUES (-2, 'company2') INSERT INTO COMPANY (ID, NAME) VALUES (-3, 'company3') INSERT INTO COMPANY (ID, NAME) VALUES (-4, 'company4') INSERT INTO EMPLOYEE (ID, NAME, AGE, SALARY, EMPLOYER_ID) VALUES (-1, 'employee1', 10, 1000, -1) "; SQL statement:
+insert into company (id, name) values (-1, 'company1') insert into company (id, name) values (-2, 'company2') insert into company (id, name) values (-3, 'company3') insert into company (id, name) values (-4, 'company4') insert into employee (id, name, age, salary, employer_id) values (-1, 'employee1', 10, 1000, -1) [42000-199]
