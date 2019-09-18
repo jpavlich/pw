@@ -1,7 +1,5 @@
 package com.example.example2.service;
 
-import java.util.Optional;
-
 import com.example.example2.exceptions.NotFoundException;
 import com.example.example2.model.Employee;
 import com.example.example2.model.EmployeeRepository;
@@ -13,12 +11,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * EmployeeService
  */
 @RestController
+@RequestMapping("/api")
 public class EmployeeService {
 
     @Autowired
@@ -40,8 +40,15 @@ public class EmployeeService {
     }
 
     @PutMapping("/employees/{id}")
-    Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employee) {
-        employee.setId(id);
+    Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employeeData) {
+
+        Employee employee = findEmployee(id);
+        employee.setAge(employeeData.getAge());
+        employee.setSalary(employeeData.getSalary());
+        employee.setName(employeeData.getName());
+
+        // How to update the employer Company?
+
         return repository.save(employee);
     }
 

@@ -15,3 +15,8 @@
     - Spring Dev Tools
     - H2 Database (o la base de datos que se necesite)
     - Spring Security
+
+
+# Para compilar y ejecutar el proyecto
+
+`./mvnw spring-boot:run`
