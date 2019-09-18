@@ -1,5 +1,6 @@
 package com.example.example2.service;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 class AdminService {
 
 
-    @GetMapping("/test")
+    @GetMapping(value="/test", produces = MediaType.APPLICATION_JSON_VALUE)
     public String test() {
-        return "admin OK";
+        return "{\"message\": \"admin OK\"}";
     }
 
 }

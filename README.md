@@ -15,3 +15,4 @@
 
 - Spring
   - `example1`: Entidades en JPA y servicios REST para acceso a datos
+  - `example2`: REST con seguridad

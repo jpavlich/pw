@@ -3,14 +3,14 @@ POST http://localhost:8080/login HTTP/1.1
 Accept: */*
 Content-Type: application/x-www-form-urlencoded
 
-username=user&password=userPass
+username=user&password=password
 
 ### Normal admin login
 POST http://localhost:8080/login HTTP/1.1
 Accept: */*
 Content-Type: application/x-www-form-urlencoded
 
-username=admin&password=adminPass
+username=admin&password=password
 
 ###
 GET http://localhost:8080/public/companies
