@@ -26,7 +26,7 @@ export class EmployeeEditComponent implements OnInit {
         switchMap(params => this.employeeService.findById(+params.get('id')))
       )
       .subscribe(result => {
-        this.employee = result;
+        this.employee = result.data;
       });
   }
 

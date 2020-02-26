@@ -16,7 +16,7 @@ export class EmployeeService {
   }
 
   findById(id: number) {
-    const url = `${environment.employeeServiceBaseUrl}/employee/${id}`;
+    const url = `${environment.employeeServiceBaseUrl}/employees/${id}`;
     console.log(url);
     return this.http.get<Employee>(url).pipe(
       retry(5), // Retries 5 times until successful

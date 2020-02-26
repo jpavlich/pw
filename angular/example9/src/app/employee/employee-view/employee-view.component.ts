@@ -24,7 +24,8 @@ export class EmployeeViewComponent implements OnInit {
         switchMap(params => this.employeeService.findById(+params.get('id')))
       )
       .subscribe(result => {
-        this.employee = result;
+        console.log(result);
+        this.employee = result.data;
       });
 
     // The following code could be used instead of the above, if and only if the user would never

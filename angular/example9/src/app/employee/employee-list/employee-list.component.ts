@@ -20,7 +20,7 @@ export class EmployeeListComponent implements OnInit {
     this.employeeService
       .findAll()
       .subscribe(
-        results => (this.employees = results),
+        results => (this.employees = results.data),
         error => console.error(error)
       );
   }

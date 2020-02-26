@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  employeeServiceBaseUrl: 'http://dummy.restapiexample.com/api/v1'
+  employeeServiceBaseUrl: 'http://localhost:8080/'
 };
 
 /*
