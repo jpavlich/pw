@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Employee } from '../shared/employee';
-import { EmployeeService } from '../shared/employee.service';
+import { Component, OnInit } from "@angular/core";
+import { Employee } from "../shared/employee";
+import { EmployeeService } from "../shared/employee.service";
 
 @Component({
-  selector: 'app-employee-list',
-  templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  selector: "app-employee-list",
+  templateUrl: "./employee-list.component.html",
+  styleUrls: ["./employee-list.component.css"]
 })
 export class EmployeeListComponent implements OnInit {
   employees: Employee[] = [];
@@ -17,11 +17,12 @@ export class EmployeeListComponent implements OnInit {
   }
 
   findEmployees() {
-    this.employeeService
-      .findAll()
-      .subscribe(
-        results => (this.employees = results.data),
-        error => console.error(error)
-      );
+    this.employeeService.findAll().subscribe(
+      results => {
+        console.log(results);
+        this.employees = results;
+      },
+      error => console.error(error)
+    );
   }
 }

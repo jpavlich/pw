@@ -7,7 +7,6 @@ import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { environment } from "src/environments/environment";
-import { ExampleResponse } from "../../shared/example-response";
 import { Employee } from "./employee";
 
 @Injectable({
@@ -60,29 +59,29 @@ export class EmployeeService {
   findById(
     id: number // : Observable<Employee>
   ) {
-    const url = `${environment.employeeServiceBaseUrl}/employee/${id}`;
-    return this.get<ExampleResponse<Employee>>(url);
+    const url = `${environment.employeeServiceBaseUrl}/employees/${id}`;
+    return this.get<Employee>(url);
   }
 
   findAll() {
     const url = `${environment.employeeServiceBaseUrl}/employees`;
-    return this.get<ExampleResponse<Employee[]>>(url);
+    return this.get<Employee[]>(url);
   }
 
   update(employee: Employee) {
-    const url = `${environment.employeeServiceBaseUrl}/update/${employee.id}`;
+    const url = `${environment.employeeServiceBaseUrl}/employees/${employee.id}`;
     return this.put(url, {
-      name: employee.employee_name,
-      age: employee.employee_age,
-      salary: employee.employee_salary
+      name: employee.name,
+      age: employee.age,
+      salary: employee.salary
     });
   }
   create(employee: Employee) {
-    const url = `${environment.employeeServiceBaseUrl}/create`;
+    const url = `${environment.employeeServiceBaseUrl}/employees`;
     return this.post(url, {
-      name: employee.employee_name,
-      age: employee.employee_age,
-      salary: employee.employee_salary
+      name: employee.name,
+      age: employee.age,
+      salary: employee.salary
     });
   }
 }

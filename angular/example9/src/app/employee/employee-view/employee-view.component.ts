@@ -25,7 +25,7 @@ export class EmployeeViewComponent implements OnInit {
       )
       .subscribe(result => {
         console.log(result);
-        this.employee = result.data;
+        this.employee = result;
       });
 
     // The following code could be used instead of the above, if and only if the user would never
