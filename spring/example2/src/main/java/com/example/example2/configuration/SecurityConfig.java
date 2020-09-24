@@ -49,13 +49,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .cors()
             .and()
             .csrf().disable()
+            // Uncomment this to enable H2 console
+            // .headers().frameOptions().disable()
+            // .and()
             .exceptionHandling()
             .authenticationEntryPoint(entryPoint)
             .and()
             .authorizeRequests()
                 .antMatchers("/public/**", "/login/**").permitAll()
                 // Uncomment this to enable H2 console
-                // .antMatchers("/h2/**").permitAll()
+                //.antMatchers("/h2/**").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
             .and()
