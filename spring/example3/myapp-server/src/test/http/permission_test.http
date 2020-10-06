@@ -16,15 +16,15 @@ username=admin&password=password
 POST http://localhost:8080/logout HTTP/1.1
 
 
-###
+### This method is accessible by anyone
 GET http://localhost:8080/public/test
 
-###
+### This method is accessible only to authenticated users
 GET http://localhost:8080/api/test
 
-###
+### This method is accessible only to administrators
 GET http://localhost:8080/api/restricted-method
 
-###
+### Retrieves info of current user
 GET http://localhost:8080/api/current-user HTTP/1.1
 Accept: */*
