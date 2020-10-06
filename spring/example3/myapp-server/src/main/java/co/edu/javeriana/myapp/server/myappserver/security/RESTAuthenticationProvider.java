@@ -1,8 +1,5 @@
 package co.edu.javeriana.myapp.server.myappserver.security;
 
-import co.edu.javeriana.myapp.server.myappserver.model.User;
-import java.util.ArrayList;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +9,14 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Component;
 
+import co.edu.javeriana.myapp.server.myappserver.model.User;
 
 @Component
 public class RESTAuthenticationProvider implements AuthenticationProvider {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
-	
+
 	@Autowired
 	private RESTUserDetailsService userDetailsService;
-	
 
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -37,9 +34,6 @@ public class RESTAuthenticationProvider implements AuthenticationProvider {
 			return null;
 		}
 	}
-	
-	
-
 
 	@Override
 	public boolean supports(Class<?> authentication) {
